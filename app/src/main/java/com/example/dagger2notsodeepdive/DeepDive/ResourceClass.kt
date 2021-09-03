@@ -6,9 +6,9 @@ import com.example.dagger2notsodeepdive.di.Sucrilhos
 import javax.inject.Inject
 
 /**
- * TODO #6.1 SCOPE
+ * TODO #6 SCOPE
  */
-//@Sucrilhos
+@Sucrilhos
 /**
  * TODO #5 @BindsOnInstance
  */

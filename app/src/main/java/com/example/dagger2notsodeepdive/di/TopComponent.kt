@@ -30,6 +30,6 @@ interface RandomInterface {
     /**
      * TODO #1
      */
-//    val randomValue: RandomValue
+    val randomValue: RandomValue
 
 }

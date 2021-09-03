@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.dagger2notsodeepdive.di.AnotherTopComponent
 import com.example.dagger2notsodeepdive.di.DaggerAnotherTopComponent
 import com.example.dagger2notsodeepdive.di.DaggerTopComponent
+import com.example.dagger2notsodeepdive.di.DaggerTopComponent.factory
 import com.example.dagger2notsodeepdive.di.TopComponent
 
 open class MyApplication : Application() {
@@ -20,15 +21,15 @@ open class MyApplication : Application() {
         return topComponent
     }
 
-    fun getAnotherTopComponent(): AnotherTopComponent {
-        return DaggerAnotherTopComponent.create()
-    }
+//    fun getAnotherTopComponent(): AnotherTopComponent {
+//        return DaggerAnotherTopComponent.create()
+//    }
 
     /**
      * TODO #5 @BindsOnInstance
      */
-//    fun getAnotherTopComponent(appCompatActivity: AppCompatActivity): AnotherTopComponent {
-//        return DaggerAnotherTopComponent.factory().create(appCompatActivity)
-//    }
+    fun getAnotherTopComponent(appCompatActivity: AppCompatActivity): AnotherTopComponent {
+        return DaggerAnotherTopComponent.factory().create(appCompatActivity)
+    }
 
 }

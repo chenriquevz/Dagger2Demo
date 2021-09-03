@@ -16,12 +16,12 @@ interface RandomValueModule {
     /**
      * TODO #6 SCOPE
      */
-//    @Sucrilhos
+    @Sucrilhos
     /**
      * TODO #3.1 Provides vs Binds
      */
-//    @Binds
-//    fun bindsRandomInterface(randomValue3: RandomValue3): RandomValueInterface
+    @Binds
+    fun bindsRandomInterface(randomValue3: RandomValue3): RandomValueInterface
 
     companion object {
 
@@ -32,22 +32,22 @@ interface RandomValueModule {
          * TODO #3 remove from modules para mostrar a diferença do @Inject Constructor
          */
         /**
-         * TODO #6.2 SCOPE @Reusable
+         * TODO #6.1 SCOPE @Reusable
          */
-//        @Reusable
-//        @Provides
-//        fun provideRandomValue() = RandomValue()
+        @Reusable
+        @Provides
+        fun provideRandomValue() = RandomValue()
 
 
         /**
          * TODO #6 SCOPE
          */
-//        @Sucrilhos
+        @Sucrilhos
         /**
-         * TODO #1.1 adicionar - mostrar diferença de parte do modulo não usado
+         * TODO #1 adicionar - mostrar diferença de parte do modulo não usado
          */
-//        @Provides
-//        fun provideRandomValue2() = RandomValue2()
+        @Provides
+        fun provideRandomValue2() = RandomValue2()
     }
 
 
