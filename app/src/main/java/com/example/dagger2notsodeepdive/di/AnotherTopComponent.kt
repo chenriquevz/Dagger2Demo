@@ -13,13 +13,13 @@ import javax.inject.Singleton
 /**
  * TODO #6 SCOPE
  */
-@Sucrilhos
+//@Sucrilhos
 @Component(
     modules = [
         /**
          * TODO #1
          */
-        RandomValueModule::class
+//        RandomValueModule::class
     ]
 )
 interface AnotherTopComponent {
@@ -27,22 +27,22 @@ interface AnotherTopComponent {
     /**
      * TODO #2
      */
-    fun inject(mainActivity: MainActivity)
+//    fun inject(mainActivity: MainActivity)
 
     /**
      * TODO #4 activitycomponent igual ao Psafe atual
      */
-    fun inject(homeFragment: HomeFragment)
+//    fun inject(homeFragment: HomeFragment)
 
 
     /**
      * TODO #5 @BindsOnInstance
      */
-    @Component.Factory
-    interface Factory {
-        fun create(
-            @BindsInstance appCompatActivity: AppCompatActivity,
-        ): AnotherTopComponent
-    }
+//    @Component.Factory
+//    interface Factory {
+//        fun create(
+//            @BindsInstance appCompatActivity: AppCompatActivity,
+//        ): AnotherTopComponent
+//    }
 
 }

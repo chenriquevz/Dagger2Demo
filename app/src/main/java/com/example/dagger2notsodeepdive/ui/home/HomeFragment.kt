@@ -28,20 +28,20 @@ class HomeFragment : Fragment() {
     /**
      * TODO #4 activitycomponent igual ao Psafe atual
      */
-    @Inject
-    lateinit var randomValue: RandomValue
-
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        (requireActivity() as MainActivity).activityAnotherTopComponent.inject(this)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        println("HomeFragment ${randomValue.getRandomInt()}")
-    }
+//    @Inject
+//    lateinit var randomValue: RandomValue
+//
+//
+//    override fun onAttach(context: Context) {
+//        super.onAttach(context)
+//        (requireActivity() as MainActivity).activityAnotherTopComponent.inject(this)
+//    }
+//
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        println("HomeFragment ${randomValue.getRandomInt()}")
+//    }
 
 
 

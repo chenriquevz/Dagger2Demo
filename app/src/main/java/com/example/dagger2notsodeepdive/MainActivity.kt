@@ -22,28 +22,28 @@ class MainActivity : AppCompatActivity() {
     /**
      * TODO #2
      */
-    @Inject
-    lateinit var randomValue: RandomValue
+//    @Inject
+//    lateinit var randomValue: RandomValue
 
     /**
      * TODO #3.1 Provides vs Binds
      */
-    @Inject
-    lateinit var randomValue2: RandomValue2
-
-    @Inject
-    lateinit var randomValue3: RandomValueInterface
+//    @Inject
+//    lateinit var randomValue2: RandomValue2
+//
+//    @Inject
+//    lateinit var randomValue3: RandomValueInterface
 
     /**
      * TODO #4 activitycomponent igual ao Psafe atual
      */
-    val activityAnotherTopComponent by lazy {
-//        (application as MyApplication).getAnotherTopComponent()
-        /**
-         * TODO #5 @BindsOnInstance
-         */
-        (application as MyApplication).getAnotherTopComponent(this)
-    }
+//    val activityAnotherTopComponent by lazy {
+////        (application as MyApplication).getAnotherTopComponent()
+//        /**
+//         * TODO #5 @BindsOnInstance
+//         */
+//        (application as MyApplication).getAnotherTopComponent(this)
+//    }
 
     /**
      * TODO #5 @BindsOnInstance
@@ -58,9 +58,9 @@ class MainActivity : AppCompatActivity() {
         /**
          * TODO #1 Pegando valor do [TopComponent] atrelado ao lifecycle do [MyApplication]
          */
-        (application as MyApplication).getTopComponent().randomValue.getRandomInt().let {
-            println("TopComponent $it")
-        }
+//        (application as MyApplication).getTopComponent().randomValue.getRandomInt().let {
+//            println("TopComponent $it")
+//        }
 
         /**
          * TODO #2 Pegando valor do [AnotherTopComponent]
@@ -70,21 +70,23 @@ class MainActivity : AppCompatActivity() {
         /**
          * TODO #4 activitycomponent igual ao Psafe atual
          */
-        activityAnotherTopComponent.inject(this)
+//        activityAnotherTopComponent.inject(this)
 
-        println("AnotherTopComponent ${randomValue.getRandomInt()}")
-
+        /**
+         * TODO #2
+         */
+//        println("AnotherTopComponent ${randomValue.getRandomInt()}")
 
         /**
          * TODO #3.1 Provides vs Binds
          */
-        println("AnotherTopComponent double ${randomValue2.getRandomDouble()}")
-        println("AnotherTopComponent float ${randomValue3.getValue()}")
+//        println("AnotherTopComponent double ${randomValue2.getRandomDouble()}")
+//        println("AnotherTopComponent float ${randomValue3.getValue()}")
 
         /**
          * TODO #5 @BindsOnInstance
          */
-        println("AnotherTopComponent ${resourceClass.getAppname()}")
+//        println("AnotherTopComponent ${resourceClass.getAppname()}")
 
     }
 

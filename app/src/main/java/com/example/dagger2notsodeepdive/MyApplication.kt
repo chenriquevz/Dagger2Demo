@@ -20,15 +20,15 @@ open class MyApplication : Application() {
         return topComponent
     }
 
-//    fun getAnotherTopComponent(): AnotherTopComponent {
-//        return DaggerAnotherTopComponent.create()
-//    }
+    fun getAnotherTopComponent(): AnotherTopComponent {
+        return DaggerAnotherTopComponent.create()
+    }
 
     /**
      * TODO #5 @BindsOnInstance
      */
-    fun getAnotherTopComponent(appCompatActivity: AppCompatActivity): AnotherTopComponent {
-        return DaggerAnotherTopComponent.factory().create(appCompatActivity)
-    }
+//    fun getAnotherTopComponent(appCompatActivity: AppCompatActivity): AnotherTopComponent {
+//        return DaggerAnotherTopComponent.factory().create(appCompatActivity)
+//    }
 
 }

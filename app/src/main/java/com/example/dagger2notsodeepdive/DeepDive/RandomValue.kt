@@ -8,12 +8,12 @@ import kotlin.random.Random
  * TODO #1 Ativando classe para entrar no dagger
  */
 
-//class RandomValue {
+class RandomValue {
 
     /**
      * TODO #3 add inject constructor
      */
-    class RandomValue @Inject constructor() {
+//    class RandomValue @Inject constructor() {
 
     private val randomInt = Random.nextInt()
 

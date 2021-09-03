@@ -28,12 +28,12 @@ class DashboardFragment : Fragment() {
     /**
      * TODO #4.1 lifecycle do component
      */
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        (requireActivity().application as MyApplication).getTopComponent().randomValue.getRandomInt().let {
-            println("DashboardFragment $it")
-        }
-    }
+//    override fun onAttach(context: Context) {
+//        super.onAttach(context)
+//        (requireActivity().application as MyApplication).getTopComponent().randomValue.getRandomInt().let {
+//            println("DashboardFragment $it")
+//        }
+//    }
 
 
     override fun onCreateView(
