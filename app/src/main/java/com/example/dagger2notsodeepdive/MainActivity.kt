@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
     /**
      * TODO #5 @BindsOnInstance
      */
+    /**
+     * TODO #7.2 remover
+     */
     @Inject
     lateinit var resourceClass: ResourceClass
 
@@ -61,6 +64,11 @@ class MainActivity : AppCompatActivity() {
         (application as MyApplication).getTopComponent().randomValue.getRandomInt().let {
             println("TopComponent $it")
         }
+
+        /**
+         * TODO #7.2 Usando dependência do topComponent?
+         */
+//        (application as MyApplication).getTopComponent().inject(this)
 
         /**
          * TODO #2 Pegando valor do [AnotherTopComponent]
@@ -85,6 +93,9 @@ class MainActivity : AppCompatActivity() {
 
         /**
          * TODO #5 @BindsOnInstance
+         */
+        /**
+         * TODO #7.2 remover
          */
         println("AnotherTopComponent ${resourceClass.getAppname()}")
 

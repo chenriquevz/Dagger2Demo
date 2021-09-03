@@ -14,6 +14,7 @@ import com.example.dagger2notsodeepdive.MyApplication
 import com.example.dagger2notsodeepdive.R
 import com.example.dagger2notsodeepdive.databinding.FragmentDashboardBinding
 import javax.inject.Inject
+import javax.inject.Named
 
 class DashboardFragment : Fragment() {
 
@@ -28,12 +29,33 @@ class DashboardFragment : Fragment() {
     /**
      * TODO #4.1 lifecycle do component
      */
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        (requireActivity().application as MyApplication).getTopComponent().randomValue.getRandomInt().let {
-            println("DashboardFragment $it")
-        }
-    }
+//    override fun onAttach(context: Context) {
+//        super.onAttach(context)
+//        (requireActivity().application as MyApplication).getTopComponent().randomValue.getRandomInt().let {
+//            println("DashboardFragment $it")
+//        }
+//    }
+
+    /**
+     * TODO #7 NAMED
+     */
+//    @Inject
+//    @Named("superString")
+//    lateinit var superString: String
+//
+//    /**
+//     * TODO #7.1 Usando dependência do topComponent?
+//     */
+//    @Inject
+//    lateinit var randomValue: RandomValue
+//
+//    override fun onAttach(context: Context) {
+//        super.onAttach(context)
+//        (requireActivity().application as MyApplication).getTopComponent().bestSubComponent.inject(this)
+//
+//        println("DashboardFragment $superString")
+//        println("DashboardFragment ${randomValue.getRandomInt()}")
+//    }
 
 
     override fun onCreateView(
