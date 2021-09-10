@@ -10,11 +10,11 @@ import javax.inject.Named
     /**
      * TODO #7 NAMED
      */
-//    NamedModuleSample::class
+    NamedModuleSample::class
 ])
 interface BestSubComponent {
 
-//fun inject (dashboardFragment: DashboardFragment)
+fun inject (dashboardFragment: DashboardFragment)
 
 }
 
@@ -23,21 +23,21 @@ interface BestSubComponent {
 /**
  * TODO #7 NAMED
  */
-//@Module
-//object NamedModuleSample {
-//
-//
-//    @Provides
-//    @Named("randomTextString1")
-//    fun provideString1(): String = "string1"
-//
-//    @Provides
-//    @Named("randomTextString2")
-//    fun provideString2(): String = "string2"
-//
-//    @Provides
-//    @Named("superString")
-//    fun provideSuperString(@Named("randomTextString1") string1: String, @Named("randomTextString2") string2: String): String {
-//        return string1 + string2
-//    }
-//}
+@Module
+object NamedModuleSample {
+
+
+    @Provides
+    @Named("randomTextString1")
+    fun provideString1(): String = "string1"
+
+    @Provides
+    @Named("randomTextString2")
+    fun provideString2(): String = "string2"
+
+    @Provides
+    @Named("superString")
+    fun provideSuperString(@Named("randomTextString1") string1: String, @Named("randomTextString2") string2: String): String {
+        return string1 + string2
+    }
+}

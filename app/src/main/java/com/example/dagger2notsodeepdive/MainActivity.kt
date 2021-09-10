@@ -51,8 +51,8 @@ class MainActivity : AppCompatActivity() {
     /**
      * TODO #7.2 remover
      */
-    @Inject
-    lateinit var resourceClass: ResourceClass
+//    @Inject
+//    lateinit var resourceClass: ResourceClass
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         /**
          * TODO #7.2 Usando dependência do topComponent?
          */
-//        (application as MyApplication).getTopComponent().inject(this)
+        (application as MyApplication).getTopComponent().inject(this)
 
         /**
          * TODO #2 Pegando valor do [AnotherTopComponent]
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         /**
          * TODO #7.2 remover
          */
-        println("AnotherTopComponent ${resourceClass.getAppname()}")
+//        println("AnotherTopComponent ${resourceClass.getAppname()}")
 
     }
 

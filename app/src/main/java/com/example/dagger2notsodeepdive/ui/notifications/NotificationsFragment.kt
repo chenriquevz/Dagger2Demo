@@ -1,5 +1,6 @@
 package com.example.dagger2notsodeepdive.ui.notifications
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +9,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.dagger2notsodeepdive.DeepDive.RandomValue
+import com.example.dagger2notsodeepdive.MyApplication
 import com.example.dagger2notsodeepdive.R
 import com.example.dagger2notsodeepdive.databinding.FragmentNotificationsBinding
+import javax.inject.Inject
 
 class NotificationsFragment : Fragment() {
 
@@ -19,6 +23,16 @@ class NotificationsFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    @Inject
+    lateinit var randomValue: RandomValue
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        (requireActivity().application as MyApplication).getTopComponent().bestSub2Component.inject(this)
+
+        println("DashboardFragment ${randomValue.getRandomInt()}")
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

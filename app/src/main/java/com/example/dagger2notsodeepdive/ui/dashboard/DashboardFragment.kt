@@ -39,23 +39,23 @@ class DashboardFragment : Fragment() {
     /**
      * TODO #7 NAMED
      */
-//    @Inject
-//    @Named("superString")
-//    lateinit var superString: String
-//
-//    /**
+    @Inject
+    @Named("superString")
+    lateinit var superString: String
+
+    /**
 //     * TODO #7.1 Usando dependência do topComponent?
 //     */
-//    @Inject
-//    lateinit var randomValue: RandomValue
-//
-//    override fun onAttach(context: Context) {
-//        super.onAttach(context)
-//        (requireActivity().application as MyApplication).getTopComponent().bestSubComponent.inject(this)
-//
-//        println("DashboardFragment $superString")
-//        println("DashboardFragment ${randomValue.getRandomInt()}")
-//    }
+    @Inject
+    lateinit var randomValue: RandomValue
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        (requireActivity().application as MyApplication).getTopComponent().bestSubComponent.inject(this)
+
+        println("DashboardFragment $superString")
+        println("DashboardFragment ${randomValue.getRandomInt()}")
+    }
 
 
     override fun onCreateView(
